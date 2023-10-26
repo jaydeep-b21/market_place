@@ -3,10 +3,6 @@ from item.models import Category, Item
 from .forms import SignupForm
 # Create your views here.
 
-
-"""
-this comment for testing purpose only
-"""
 def index(request):
     items = Item.objects.filter(is_sold=False)[0:6]
     categories = Category.objects.all()
